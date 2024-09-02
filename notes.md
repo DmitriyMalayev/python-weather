@@ -1,3 +1,6 @@
+Using flask to create weather app 
+
+
 pip freeze > requirements.txt
 pip install requests python-dotenv
 pip install Flask      

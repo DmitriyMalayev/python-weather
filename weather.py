@@ -12,8 +12,13 @@ def get_weather_data(city="New York"):
     return weather_data
 
 
+weather = True
 if __name__ == "__main__":
-    print("Getting weather data for New York...\n")
-    city = input("Enter city name: ")
-    weather_data = get_weather_data(city)
-    pprint(weather_data)
+    while True:
+        city = input("Enter city name: ")
+        print("Getting weather data for {city}...\n")
+        weather_data = get_weather_data(city if city else "New York")
+        pprint(weather_data)
+        info = input("\nPress x to exit or press any other key to view more details: ")
+        if info.lower() == "x":
+            weather = False
